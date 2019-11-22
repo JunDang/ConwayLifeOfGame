@@ -13,6 +13,10 @@
 		A537F91E23883D9A00409E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A537F91D23883D9A00409E9D /* Assets.xcassets */; };
 		A537F92123883D9A00409E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A537F91F23883D9A00409E9D /* LaunchScreen.storyboard */; };
 		A537F92C23883D9A00409E9D /* ConwayGameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537F92B23883D9A00409E9D /* ConwayGameOfLifeTests.swift */; };
+		A537F93823883E0300409E9D /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537F93723883E0300409E9D /* BaseCollectionViewController.swift */; };
+		A537F93A23883E1B00409E9D /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537F93923883E1B00409E9D /* GameController.swift */; };
+		A537F94023883E6800409E9D /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537F93F23883E6800409E9D /* GameOfLife.swift */; };
+		A537F94123883E6800409E9D /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537F93F23883E6800409E9D /* GameOfLife.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 		A537F92723883D9A00409E9D /* ConwayGameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConwayGameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A537F92B23883D9A00409E9D /* ConwayGameOfLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwayGameOfLifeTests.swift; sourceTree = "<group>"; };
 		A537F92D23883D9A00409E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A537F93723883E0300409E9D /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		A537F93923883E1B00409E9D /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		A537F93F23883E6800409E9D /* GameOfLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLife.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +84,14 @@
 		A537F91523883D9800409E9D /* ConwayGameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				A537F93623883DCA00409E9D /* Controllers */,
 				A537F91623883D9800409E9D /* AppDelegate.swift */,
 				A537F91823883D9800409E9D /* ViewController.swift */,
 				A537F91A23883D9800409E9D /* Main.storyboard */,
 				A537F91D23883D9A00409E9D /* Assets.xcassets */,
 				A537F91F23883D9A00409E9D /* LaunchScreen.storyboard */,
 				A537F92223883D9A00409E9D /* Info.plist */,
+				A537F93F23883E6800409E9D /* GameOfLife.swift */,
 			);
 			path = ConwayGameOfLife;
 			sourceTree = "<group>";
@@ -94,6 +103,15 @@
 				A537F92D23883D9A00409E9D /* Info.plist */,
 			);
 			path = ConwayGameOfLifeTests;
+			sourceTree = "<group>";
+		};
+		A537F93623883DCA00409E9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A537F93723883E0300409E9D /* BaseCollectionViewController.swift */,
+				A537F93923883E1B00409E9D /* GameController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +167,6 @@
 					};
 					A537F92623883D9A00409E9D = {
 						CreatedOnToolsVersion = 10.3;
-						TestTargetID = A537F91223883D9800409E9D;
 					};
 				};
 			};
@@ -197,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A537F94023883E6800409E9D /* GameOfLife.swift in Sources */,
+				A537F93823883E0300409E9D /* BaseCollectionViewController.swift in Sources */,
+				A537F93A23883E1B00409E9D /* GameController.swift in Sources */,
 				A537F91923883D9800409E9D /* ViewController.swift in Sources */,
 				A537F91723883D9800409E9D /* AppDelegate.swift in Sources */,
 			);
@@ -206,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A537F94123883E6800409E9D /* GameOfLife.swift in Sources */,
 				A537F92C23883D9A00409E9D /* ConwayGameOfLifeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +417,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UY3JE2JN3T;
 				INFOPLIST_FILE = ConwayGameOfLifeTests/Info.plist;
@@ -409,7 +429,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConwayGameOfLife.app/ConwayGameOfLife";
 			};
 			name = Debug;
 		};
@@ -417,7 +436,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UY3JE2JN3T;
 				INFOPLIST_FILE = ConwayGameOfLifeTests/Info.plist;
@@ -430,7 +448,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConwayGameOfLife.app/ConwayGameOfLife";
 			};
 			name = Release;
 		};
